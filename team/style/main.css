@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(45deg, #00ffcc, #009977);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .appbar-title {
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.dropdown {
+    cursor: pointer;
+    font-size: 1rem;
+    background: #1e1e1e;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    transform: background 0.3s;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+nav ul li { display: inline; }
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover { color: #ffcc00 }
+
+.introduce h1 {
+    align-items: center;
+    flex-direction: column;
+    margin-top: 150px;
+    gap: 10px;
+    font-size: 2.5rem;
+}
+
+.introduce p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.section {
+    display: none;
+    padding: 50px 20px;
+    flex: 1;
+}
+
+.active { display: block; }
+
+footer {
+    background-color: #1e1e1e;
+    padding: 20px;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .menu-icon { display: block; }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #1e1e1e;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav ul .active { display: flex; }
+}
