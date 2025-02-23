@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <title>NewLines</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="shortcut icon" href="./assets/image/favicon.png" type="image/x-icon">
+
+    <script type="text/javascript" src="./scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="appbar-title" onclick="loadSection('introduce')">NewLines</div>
+        <!--<div class="menu">☰</div> -->
+ 
+        <nav>
+            <ul>
+                <li><a href="#" onclick="loadSection('about')">私たち</a></li>
+                <li><a href="#" onclick="loadSection('contact')">ご連絡</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="introduce" class="section active">
+        <h1>🚀 NewLines</h1>
+        <p id="content">NewLinesとともに新しい未来へ</p>
+    </section>
+
+    <section id="about" class="section">
+        <h2>私たち</h2>
+        <p>NewLinesと共に新しい未来を切り開く世界を作りましょう</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>ご連絡方法</h2>
+        <p>メール : qkrwlsdns123@outlook.com</p>
+    </section>
+
+    <footer>
+        <p id="footer-content"></p>
+    </footer>
+
+    <script type="text/javascript">
+        function loadSection(section) {
+            document.querySelectorAll('.section').forEach(sec => {
+                sec.classList.remove('active');
+            });
+            document.getElementById(section).classList.add('active');
+        }
+    </script>
+</body>
+</html>
